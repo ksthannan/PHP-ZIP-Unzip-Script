@@ -4,8 +4,8 @@ Extract your zip file in the cpanel file manager when you use FTP client or if y
 <li>
 -Make sure you are going to extract from zip archived file.
 </li>
-<li style="color=#E64A3A">
--Download the script and upload zip.php to your server.
+<li>
+<font color="red">-Download the script and upload zip.php to your server.</font>
 </li>
 <li>
 -Then run/execute the script in your browser by URL like this http://www.example.com/zip.php
