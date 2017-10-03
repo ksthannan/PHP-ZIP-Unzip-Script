@@ -5,15 +5,20 @@ Extract your zip file in the cpanel file manager when you use FTP client or if y
 -Make sure you are going to extract from zip archived file.
 </li>
 <li>
--Download the script and upload it to your cpanel.
+-Download the script and upload zip.php to your server.
 </li>
 <li>
--Then run the script in your browser by URL like this http://www.example.com/zip.php
+-Then run/execute the script in your browser by URL like this http://www.example.com/zip.php
 </li>
 <li>
--If your given directory doesn't exist, that will be created automatically.
+-Make sure that your all information in the input box that you provided are all correct to avoid any unwanted error.
 </li>
-
+<li>
+-If your given targeted directory doesn't exist, that will be created automatically.
+</li>
+<li>
+-Now click on extract button and get your file extracted easily.
+</li>
 </br>
 </br>
 <b><a href="http://www.facebook.com/ksthannan/">Me on facebook</a></b>
