@@ -1,8 +1,6 @@
-# zip-extractor
+<h1># zip-extractor</h1>
 Extract your zip file in the cpanel file manager when you use FTP client or you do not have extract option.
-</br>
 <h1>Instructions:</h1>
-</br>
 <li>
 -Make sure you are going to extract from zip archived file.
 </li>
