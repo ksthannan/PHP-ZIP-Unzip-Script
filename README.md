@@ -17,6 +17,7 @@ Extract your zip file in the cpanel file manager when you use FTP client or you 
 -If your given directory doesn't exist, that will be created automatically.
 </li>
 
-
+</br>
+</br>
 <b><a href="http://www.facebook.com/ksthannan/">Me on facebook</a></b>
 <p>Copyright &copy; 2017. All rights reserved.</p>
