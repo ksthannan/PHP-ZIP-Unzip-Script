@@ -5,9 +5,6 @@ Extract your zip file in the cpanel file manager when you use FTP client or if y
 -Make sure you are going to extract from zip archived file.
 </li>
 <li>
--You can use this software freely.
-</li>
-<li>
 -Download the script and upload it to your cpanel.
 </li>
 <li>
