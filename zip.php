@@ -4,109 +4,19 @@
 <head>
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Welcome to ZIP Archive</title>
+	<title>PHP ZIP Extractor</title>
+	<link rel="icon" href="" type="image/gif" sizes="16x16">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        .main {
-            max-width: 960px;
-            min-width: 320px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .main_wrap {
-            padding: 40px 20px;
-        }
-        
-        .header_area {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .footer_area {
-            width: 100%;
-            font-size: 12px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .warning {
-            color: #EA4C55;
-        }
-        
-        .file_list {
-            width: 90%;
-            display: block;
-            max-height: 200px;
-            overflow-x: hidden;
-            border: 2px solid #B2B2B2;
-            overflow-y: scroll;
-            margin-bottom: 20px;
-        }
-        
-        .file_list li:first-child {
-            background: #DADADA;
-        }
-        
-        .file_list li {
-            cursor: pointer;
-            margin: 1px;
-            padding: 0 5px;
-            border-radius: 3px;
-        }
-        
-        .file_list li:hover {
-            background: #DADADA;
-        }
-        
-        .zip_input {
-            min-height: 200px;
-        }
-        
-        input[type="text"] {
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            min-width: 280px;
-        }
-        
-        input[type="submit"] {
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        input[type="submit"]:hover {
-            border: 1px solid #999;
-        }
-        
-        .zip_input input[type="text"] {
-            display: block;
-            overflow: hidden;
-            padding: 10px;
-            margin: 5px 0;
-        }
-        
-        .zip_input input[type="submit"] {
-            display: block;
-            padding: 10px 20px;
-            margin: 10px 0;
-        }
+		*{margin:0;padding:0;text-shadow:1px 1px #fff}a{text-decoration:none}body{font-size:14px;line-height:24px}.main{display:block;max-width:960px;margin:0 auto;padding:20px}.main_wrap{padding:40px 20px}.header_area{background:rgba(0,0,0,.1)}.footer_area{font-size:12px;background:rgba(0,0,0,.1)}.warning{color:#ea4c55}.file_list{width:100%;display:block;max-height:200px;overflow-x:hidden;border:2px solid #b2b2b2;overflow-y:scroll;margin-bottom:20px}.file_list li:first-child{background:rgba(0,0,0,.1)}.file_list li{cursor:default;margin:1px;padding:0 5px;border-radius:3px}.file_list li:hover{background:rgba(0,0,0,.1)}.zip_input{min-height:200px}input[type=text]{border:1px solid #ddd;border-radius:3px;width:calc(100% - 20px);padding:10px;}input[type=submit]{border:1px solid #ddd;border-radius:3px;cursor:pointer;font-size:16px}input[type=submit]:hover{border:1px solid #999}.zip_input input[type=text]{display:block;overflow:hidden;padding:10px;margin:5px 0;width:calc(100% - 20px);}.zip_input input[type=submit]{display:block;padding:10px 20px;margin:10px 0}.author_info{margin-top:50px}
     </style>
 </head>
 
 <body>
     <div class="main header_area">
-        <h2>Welcome to ZIP Extractor</h2>
+        <h2>PHP ZIP Extractor</h2>
+		<p>Unzip your zip files easily.</p>
     </div>
     <?php if(isset($_REQUEST['confirm'])){ ?>
         <div class="main main_wrap">
@@ -114,22 +24,18 @@
 			$zip = new ZipArchive;
 			$ext_tar_path = $_REQUEST['target_path'];
 			$ext_tar_from_path = $_REQUEST['target_from_path'];
-
 			if ($zip->open($ext_tar_from_path) === TRUE) {
-
-			echo '<h2 style="color:green">File lists: </h2><div class="file_list">';
+			echo '<h3 style="color:green">Files has been extracted: </h3><div class="file_list">';
 			 for($i = 0; $i < $zip->numFiles; $i++) 
 			 {   
 				  echo '<li>' . $zip->getNameIndex($i) . '</li>'; 
 			 } 		
 			 echo '</div>';
-
 				$zip->extractTo($ext_tar_path);
 				$zip->close();
-				echo '<b style="color:green">File has been extracted successfully</b><br /><a href="" style="font-size:20px;">&#8592; Back</a>';
-
+				echo '<b style="color:green">File has been extracted successfully</b><br /><a href="" style="font-size:20px;">&#8592; Back to extract more items</a>';
 			} else {
-				echo '<b style="color:red;">Oops! </br>Failed to extract the file.</b><br /><a href="" style="font-size:20px;">Try again</a>';
+				echo '<b style="color:red;">Oops! Something may wrong there. </br>Failed to extract the file.</b><br /><a href="" style="font-size:20px;">Try again</a>';
 			}
 		?>
         </div>
@@ -141,27 +47,33 @@
 
             <div class="main zip_input">
                 <div class="warning">
-                    <p>Notice:</p>
-                    <li>Make sure you are going to extract from zip archived file.</li>
-                    <li>Please input the correct information to avoid any unwanted error.</li>
+                    <p>Important Notice:</p>
+                    <li>Make sure you are going to extract a zip file.</li>
                     <li>If your given directory doesn't exist, that will be created automatically.</li>
+					<li>Please input the correct information to avoid any unwanted error.</li>
                 </div>
                 <br />
                 <form action="" method="post">
-                    <label for="">Archived file (./path/example.zip):
-                        <input type="text" name="target_from_path" value="<?php echo $ext_path;?>example.zip" />
+                    <label for="arc_file">Zip file - <span style="color:#ea4c55">replace <code>file_name.zip</code> with your existing zip file</span>
+                        <input type="text" id="arc_file" name="target_from_path" value="<?php echo $ext_path;?>file_name.zip" />
                     </label>
-                    <label for="">Extract to (extract here):
-                        <input type="text" name="target_path" value="<?php echo $ext_path;?>" />
+                    <label for="ext_file">Extract (Extract here)
+                        <input type="text" id="ext_file" name="target_path" value="<?php echo $ext_path;?>" />
                     </label>
                     <input type="hidden" name="confirm" value="1" />
                     <input type="submit" value="Extract" />
                 </form>
+				
+				<div class="author_info">
+					<p>M A Hannan,</p>
+					<p>Professional Full Stack Web Developer,</p>
+					<p>Website: <a style="color:#333;" href="http://devhannan.com">https://www.devhannan.com</a></p>
+				</div>
             </div>
 
             <?php } ?>
                 <div class="main footer_area">
-                    <p>Copyright &copy; <a href="https://www.facebook.com/ksthannan/">Abdul Hannan</a> 2017. All Rights Reserved.</p>
+                    <p>Copyright &copy; <a href="https://www.facebook.com/ksthannan/">M A Hannan</a> 2017. All Rights Reserved.</p>
                 </div>
 </body>
 
