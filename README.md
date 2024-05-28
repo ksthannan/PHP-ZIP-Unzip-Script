@@ -21,5 +21,4 @@ Effortlessly unzip your files with this simple PHP script. Try it now for a quic
 </li>
 </br>
 </br>
-<b><a href="http://www.facebook.com/ksthannan/">Me on facebook</a></b>
-<p>Copyright &copy; 2017. All rights reserved.</p>
+<p><a href="https://devcone.com">Devcone</a></p>
