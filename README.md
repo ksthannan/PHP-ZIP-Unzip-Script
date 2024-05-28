@@ -1,5 +1,5 @@
-<h1># zip-extractor</h1>
-Extract your zip file from the FTP Client or Cpanel when you do not have the extract/unzip option.
+<h1>PHP ZIP Unzip Script</h1>
+Effortlessly unzip your files with this simple PHP script. Try it now for a quick and reliable file extraction solution!
 <h1>Instructions:</h1>
 <li>
 -Make sure you are going to extract from zip archived file.
