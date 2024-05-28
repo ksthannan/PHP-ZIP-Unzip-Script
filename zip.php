@@ -15,8 +15,8 @@
 
 <body>
     <div class="main header_area">
-        <h2>PHP ZIP Extractor</h2>
-		<p>Unzip your zip files easily.</p>
+        <h2>PHP ZIP Unzip Script</h2>
+		<p>Effortlessly unzip your files with this simple PHP script. Try it now for a quick and reliable file extraction solution!</p>
     </div>
     <?php if(isset($_REQUEST['confirm'])){ ?>
         <div class="main main_wrap">
@@ -65,15 +65,15 @@
                 </form>
 				
 				<div class="author_info">
-					<p>M A Hannan,</p>
+					<p>Abdul Hannan,</p>
 					<p>Professional Full Stack Web Developer,</p>
-					<p>Website: <a style="color:#333;" href="http://devhannan.com">https://www.devhannan.com</a></p>
+					<p>Website: <a style="color:#333;" href="http://devhannan.com">https://www.devcone.com</a></p>
 				</div>
             </div>
 
             <?php } ?>
                 <div class="main footer_area">
-                    <p>Copyright &copy; <a href="https://www.facebook.com/ksthannan/">M A Hannan</a> 2017. All Rights Reserved.</p>
+                    <p>Copyright &copy; <a href="https://devcone.com/">Devcone</a> 2024. All Rights Reserved.</p>
                 </div>
 </body>
 
