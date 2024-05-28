@@ -21,4 +21,4 @@ Effortlessly unzip your files with this simple PHP script. Try it now for a quic
 </li>
 </br>
 </br>
-<p><a href="https://devcone.com">Devcone</a></p>
+<p>Developed by <a href="https://devcone.com">Devcone</a></p>
